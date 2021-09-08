@@ -1,5 +1,5 @@
 import streamlit as st
-import plotly.figure_factory as ff
+#import plotly.figure_factory as ff
 import pandas as pd
 #import matplotlib.pyplot as plt 
 import requests	
@@ -39,7 +39,7 @@ if ticker:
 
 	#fig, ax = plt.subplots(figsize=(10, 10))
 
-	#st.write(df_from_json)
+	st.write(df_from_json)
 
 	# Add x-axis and y-axis
 	#ax.plot(df_from_json['5. adjusted close'])
