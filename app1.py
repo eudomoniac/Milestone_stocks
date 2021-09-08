@@ -10,6 +10,7 @@ ticker = st.sidebar.text_input("Please enter a ticker symbol","").upper()
 start_date = st.sidebar.text_input("Please enter a start date","2021-01-01")
 end_date = st.sidebar.text_input("Please enter an end date","2021-03-01")
 
+api = '7LWQX624YP1KQI3S'
 
 r4 = requests.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&outputsize=full&output_format=json&symbol=GOOG&apikey=api')
 json_to_read = r4.json()
