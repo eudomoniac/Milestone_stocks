@@ -16,7 +16,7 @@ start_date = st.sidebar.text_input("Please enter a start date in the form YYYY-M
 end_date = st.sidebar.text_input("Please enter an end date in the form YYYY-MM-DD", "")
 
 
-r4 = requests.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&outputsize=full&output_format=json&symbol=GOOG&apikey=key')
+r4 = requests.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&outputsize=full&output_format=json&symbol=ticker&apikey=key')
 json_to_read = r4.json()
 
 #st.write(api)
