@@ -6,17 +6,28 @@ import requests
 from bokeh.plotting import figure
 from bokeh.models import DatetimeTickFormatter
 import os
+#from urllib.parse import quote
+
+
+st.title("Milestone Project")
+
 
 key = os.environ['KEY']
 
-st.title("Milestone Project")
 
 ticker = st.sidebar.text_input("Please enter a ticker symbol","").upper()
 start_date = st.sidebar.text_input("Please enter a start date in the form YYYY-MM-DD", "")
 end_date = st.sidebar.text_input("Please enter an end date in the form YYYY-MM-DD", "")
 
 
-r4 = requests.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&outputsize=full&output_format=json&symbol=ticker&apikey=key')
+
+
+
+params_dict = {'symbol': ticker, 'apikey': key}
+
+r4 = requests.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&outputsize=full&output_format=json&symbol&apikey', 
+                  params = params_dict)
+
 json_to_read = r4.json()
 
 #st.write(api)
