@@ -1,5 +1,5 @@
 pandas
-streamlit==0.88.0
+streamlit==0.85.0
 python-dotenv
-bokeh
+bokeh=2.2.0
 requests
