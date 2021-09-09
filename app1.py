@@ -5,14 +5,18 @@ import pandas as pd
 import requests	
 from bokeh.plotting import figure
 from bokeh.models import DatetimeTickFormatter
+import os
+
+key = os.environ['KEY']
+
+st.title("Milestone Project")
 
 ticker = st.sidebar.text_input("Please enter a ticker symbol","").upper()
-start_date = st.sidebar.text_input("Please enter a start date","2021-01-01")
-end_date = st.sidebar.text_input("Please enter an end date","2021-03-01")
+start_date = st.sidebar.text_input("Please enter a start date in the form YYYY-MM-DD", "2021-01-01")
+end_date = st.sidebar.text_input("Please enter an end date in the form YYYY-MM-DD","2021-03-01")
 
-api = '7LWQX624YP1KQI3S'
 
-r4 = requests.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&outputsize=full&output_format=json&symbol=GOOG&apikey=api')
+r4 = requests.get('https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&outputsize=full&output_format=json&symbol=GOOG&apikey=key')
 json_to_read = r4.json()
 
 #st.write(api)
