@@ -37,7 +37,7 @@ if ticker and start_date and end_date:
 	for key, value in json_to_read.items():
 	    json_to_list.append([key, value])
 
-	st.write(json_to_list)
+	#st.write(json_to_list)
 	    
 	#len(json_to_list)
 
