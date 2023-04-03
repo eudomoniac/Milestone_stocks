@@ -1,7 +1,6 @@
 # Streamlit on Heroku
 
-This project is intended to help you tie together some important concepts and
-technologies from the 12-day course, including Git, Streamlit, JSON, Pandas,
+This project uses Git, Streamlit, JSON, Pandas,
 Requests, Heroku, and Bokeh for visualization.
 
 The repository contains a basic template for a Streamlit configuration that will
@@ -10,8 +9,8 @@ work on Heroku.
 A [finished example](https://streamlit-12day-example.herokuapp.com/) that demonstrates some basic functionality.
 
 ## Step 1: Setup and deploy
-- Git clone the existing template repository.
-- `Procfile`, `requirements.txt`, and `setup.py` contain some default settings. If you want, you can change the email address in `setup.py` to your own, but it won't affect anything in the app.
+- Git clone the repository.
+- `Procfile`, `requirements.txt`, and `setup.py` contain some default settings. 
 
 - Create Heroku application with `heroku create <app_name>` or leave blank to
   auto-generate a name.
